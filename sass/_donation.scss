@@ -1,0 +1,99 @@
+main.donation {
+    width: 100%;
+
+    article {
+        padding: 1rem;
+
+        h2.page-title {
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        div.donation-content {
+            div.donation-row {
+                display: flex;
+
+                div.donation-col {
+                    width: 100%;
+                    padding: 1rem;
+                    border-radius: 10px;
+                    border: 1px solid grey;
+                    margin: 0.5rem;
+
+                    div.donation-header {
+                        img {
+                            max-width: 100%;
+                            display: block;
+                            height: 30vh;
+                            margin: auto;
+                        }
+                    }
+
+                    div.donation-body {
+                        text-align: left;
+                        padding: 1rem;
+                    }
+
+                    div.donation-footer {
+                        text-align: center;
+                        padding: 1rem 0;
+
+                        a {
+                            padding: 0.5rem 1rem;
+                            background-color: #383e56;
+                            color: white;
+                            text-decoration: none;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    main.donation {
+        article {
+            padding: 1rem 5rem;
+
+            h2.page-title {
+                padding-top: 5rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 415px) and (max-width: 768px) {
+    main.donation {
+        padding-top: 3rem;
+
+        article {
+            padding: 1rem 10rem;
+
+            div.donation-content {
+                div.donation-row {
+                    // display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 414px) {
+    main.donation {
+        padding-top: 3rem;
+
+        article {
+            padding: 1rem;
+
+            div.donation-content {
+                div.donation-row {
+                    // display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

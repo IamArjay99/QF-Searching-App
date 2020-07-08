@@ -1,0 +1,22 @@
+main#content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 4rem;
+    padding-left: 250px;
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    transition: all 750ms;
+
+    article {
+        min-height: 89.8vh;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    main#content {
+        padding-left: 70px;
+    }
+}

@@ -1,0 +1,189 @@
+main.request-main {
+    article {
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        // align-items: center;
+
+        div.request-patient-form {
+            width: 40vw;
+            background-color: #2f697c;
+            min-height: 60vh;
+            height: auto;
+            border-radius: 10px;
+
+            form {
+                padding: 2rem;
+
+                .error {
+                    text-align: center;
+                    padding: 1rem 0;
+                    background-color: rgba(255, 0, 0, 0.479);
+                    color: rgba(255, 255, 255, 0.849);
+                    border: 1px solid rgba(255, 0, 0, 0.616);
+                    transition: all 250ms;
+                }
+
+                label {
+                    font-size: 1.05rem;
+                    color: white;
+                }
+
+                div.form-group {
+                    padding: 0.5rem;
+
+                    input,
+                    select,
+                    textarea {
+                        width: 100%;
+                        outline: none;
+                        border: 1px solid grey;
+                        padding: 0.5rem 0.3rem;
+                        font-size: 1rem;
+                        border-radius: 5px;
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+
+                    textarea {
+                        height: 6rem;
+                        resize: none;
+                    }
+
+                    select {
+                        option {
+                            border: none;
+                            outline: none;
+                        }
+
+                        option:nth-child(odd) {
+                            background-color: rgb(184, 182, 182);
+                        }
+                    }
+                }
+
+                button {
+                    border-radius: 5px;
+                    padding: 0.5rem 1rem;
+                    font-size: 1rem;
+                    margin: 0.5rem;
+                    outline: none;
+                    border: 2px solid white;
+                    color: white;
+                    background-color: #183641;
+                    transition: all 500ms;
+                    cursor: pointer;
+
+                    &:hover {
+                        border: 2px solid #183641;
+                        color: #183641;
+                        background-color: #4ba7c9;
+                    }
+                }
+            }
+        }
+
+        div.table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            height: auto;
+            margin-bottom: 2rem;
+            border: 1px solid black;
+            align-self: flex-start;
+
+            table {
+                width: 100%;
+                display: table;
+                border-collapse: collapse;
+                text-align: center;
+                height: 100%;
+
+                thead,
+                tbody {
+                    tr {
+                        display: table-row;
+                        td,
+                        th {
+                            border: 1px solid grey;
+                            padding: 0.5rem 1rem;
+                        }
+                    }
+                }
+
+                thead,
+                tbody {
+                    tr {
+                        th {
+                            background-color: rgb(41, 40, 40);
+                            color: white;
+                        }
+                    }
+                }
+
+                tbody {
+                    tr {
+                        td {
+                            .btn {
+                                padding: 0.3rem;
+                                border-radius: 5px;
+                                margin: 1px;
+                                transition: all 250ms;
+                                font-size: 1rem;
+                                cursor: pointer;
+                            }
+
+                            .btn-primary {
+                                background-color: darkblue;
+                                color: white;
+                                border: 1px solid darkblue;
+
+                                &:hover {
+                                    background-color: transparent;
+                                    color: darkblue;
+                                }
+                            }
+
+                            .btn-danger {
+                                background-color: darkred;
+                                color: white;
+                                border: 1px solid darkred;
+
+                                &:hover {
+                                    background-color: transparent;
+                                    color: darkred;
+                                }
+                            }
+
+                            select {
+                                width: 100%;
+                                font-size: 1.1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    main.request-main {
+        article {
+            div.request-patient-form {
+                width: 60vw;
+            }
+        }
+    }
+}
+
+@media (max-width: 414px) {
+    main.request-main {
+        article {
+            div.request-patient-form {
+                width: 80vw;
+                form {
+                    padding: 1rem 0.5rem;
+                }
+            }
+        }
+    }
+}

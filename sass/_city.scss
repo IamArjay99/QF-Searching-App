@@ -1,0 +1,116 @@
+main.city {
+    width: 100%;
+    padding: 5rem 2rem 2rem 2rem;
+
+    article {
+        padding: 1rem;
+
+        h2.page-title {
+            text-align: center;
+        }
+
+        div.city-content {
+            padding: 1rem;
+
+            div.city-row {
+                display: flex;
+                margin-top: 3rem;
+                width: 100%;
+                flex-direction: row;
+
+                div.city-col {
+                    width: 100%;
+                    padding: 0.5rem 1rem;
+
+                    div.city-col-header {
+                        text-align: center;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                        padding-bottom: 1rem;
+                    }
+
+                    div.city-col-body {
+                        table {
+                            width: 100%;
+                            border: 1px solid grey;
+                            font-size: 1.1rem;
+                            text-align: center;
+                            border-collapse: collapse;
+
+                            thead {
+                                tr {
+                                    th {
+                                        border: 1px solid grey;
+                                        padding: 0.5rem;
+                                    }
+                                }
+                            }
+
+                            tbody {
+                                tr {
+                                    td {
+                                        border: 1px solid grey;
+                                        padding: 0.5rem;
+                                    }
+                                }
+
+                                tr:nth-child(odd) {
+                                    background-color: #e7e7e7;
+                                }
+                            }
+                        }
+
+                        #loadingPatients {
+                            text-align: center;
+
+                            img {
+                                max-width: 100%;
+                                display: block;
+                                height: 15vh;
+                                margin: auto;
+                            }
+                        }
+
+                        #loadingNeeds {
+                            text-align: center;
+
+                            img {
+                                max-width: 100%;
+                                display: block;
+                                height: 15vh;
+                                margin: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    main.city {
+        padding: 3rem 0;
+
+        article {
+            h2.page-title {
+                padding-top: 1rem;
+            }
+
+            div.city-content {
+                padding: 1rem;
+
+                div.city-row {
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    div.city-col {
+                        width: 70vw;
+                        padding: 0 0 1rem 0;
+                    }
+                }
+            }
+        }
+    }
+}

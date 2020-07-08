@@ -1,0 +1,214 @@
+aside.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-height: 100vh;
+    background-color: #3b6978;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    transition: all 750ms;
+
+    div.sidebar-header {
+        display: flex;
+        align-items: center;
+        padding: 1rem 1rem 1rem 0;
+        width: 100%;
+        background-color: #18637c;
+        height: 4rem;
+
+        div.header-image {
+            padding-left: 1.2rem;
+
+            i {
+                font-size: 2rem;
+                color: white;
+            }
+        }
+
+        div.header-name {
+            padding-left: 0.5rem;
+            font-size: 1.1rem;
+            color: #e7dfd5;
+        }
+    }
+
+    div.sidebar-body {
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            list-style-type: none;
+            padding: 0;
+
+            li {
+                padding: 1.2rem;
+                width: 100%;
+                transition: all 250ms;
+
+                a {
+                    text-decoration: none;
+                    font-size: 1.1rem;
+                    color: white;
+
+                    i {
+                        font-size: 1.5rem;
+                    }
+
+                    span {
+                        padding-left: 0.7rem;
+                    }
+                }
+
+                &:hover {
+                    background-color: #204051;
+                }
+            }
+
+            li.active {
+                background-color: #2b4352;
+            }
+        }
+    }
+    div.sidebar-footer {
+        padding: 1rem 0;
+        background-color: #18637c;
+        border-right: 2px solid #035f7e;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+
+        a {
+            text-decoration: none;
+            color: #e7dfd5;
+        }
+    }
+}
+
+aside.sidebar.min {
+    width: 70px;
+
+    div.sidebar-header {
+        justify-content: center;
+
+        div.header-image {
+            padding-left: 0rem;
+        }
+
+        div.header-name {
+            display: none;
+        }
+    }
+
+    div.sidebar-body {
+        ul {
+            justify-content: center;
+            align-items: center;
+
+            li {
+                a {
+                    i {
+                        font-size: 1.5rem;
+                    }
+
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    div.sidebar-footer {
+        a {
+            font-size: 1.5rem;
+
+            span {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    aside.sidebar {
+        width: 70px;
+        transition: all 750ms;
+
+        div.sidebar-header {
+            justify-content: center;
+
+            div.header-image {
+                padding-left: 0rem;
+            }
+
+            div.header-name {
+                display: none;
+            }
+        }
+
+        div.sidebar-body {
+            ul {
+                justify-content: center;
+                align-items: center;
+
+                li {
+                    a {
+                        i {
+                            font-size: 1.5rem;
+                        }
+
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        div.sidebar-footer {
+            a {
+                font-size: 1.5rem;
+
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    aside.sidebar.max {
+        width: 250px;
+        transition: all 750ms;
+
+        div.sidebar-header {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+
+            div.header-name {
+                display: inline;
+            }
+        }
+
+        div.sidebar-body {
+            ul {
+                li {
+                    a {
+                        span {
+                            display: inline;
+                        }
+                    }
+                }
+            }
+        }
+        div.sidebar-footer {
+            span {
+                display: inline;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}

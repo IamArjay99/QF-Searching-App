@@ -1,0 +1,81 @@
+main.patient-main {
+    article {
+        padding: 1rem 3rem;
+
+        div.container {
+            h2 {
+                text-align: center;
+            }
+
+            div.row {
+                display: flex;
+                margin-top: 1rem;
+
+                .col {
+                    flex-grow: 1;
+                    padding: 1rem;
+
+                    table {
+                        display: table;
+                        border-collapse: collapse;
+                        width: 100%;
+
+                        tr {
+                            display: table-row;
+
+                            td,
+                            th {
+                                border: 1px solid grey;
+                                font-size: 1rem;
+                                padding: 0.5rem;
+                                text-align: left;
+
+                                button {
+                                    float: right;
+                                    background-color: transparent;
+                                    color: rgb(73, 81, 184);
+                                    font-size: 1.1rem;
+                                    border-radius: 2px;
+                                    border: none;
+                                    cursor: pointer;
+                                    transition: all 250ms;
+
+                                    &:hover {
+                                        color: rgb(15, 27, 185);
+                                        transform: scale(1.1);
+                                    }
+                                }
+                            }
+
+                            .label {
+                                font-size: 1rem;
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1020px) {
+    main.patient-main {
+        article {
+            padding: 1rem;
+
+            div.container {
+                div.row {
+                    flex-direction: column;
+
+                    .col {
+                        border: 1px solid grey;
+                        width: 100%;
+                        padding: 0 0 0.2rem 0;
+                        overflow: auto;
+                    }
+                }
+            }
+        }
+    }
+}

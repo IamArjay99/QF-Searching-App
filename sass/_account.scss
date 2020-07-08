@@ -1,0 +1,88 @@
+main.account-main {
+    article {
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        div.account-patient-table {
+            width: 40vw;
+            position: relative;
+            overflow-x: auto;
+            height: auto;
+            max-height: 70vh;
+            border: 1px solid grey;
+
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                height: auto;
+                display: table;
+
+                tr {
+                    display: table-row;
+
+                    td,
+                    th {
+                        border: 1px solid #dee2e6;
+                        padding: 1rem;
+                        font-size: 1.1rem;
+                        text-align: left;
+                    }
+
+                    td {
+                        button {
+                            border: 1px solid #3b6978;
+                            cursor: pointer;
+                            border-radius: 5px;
+                            background-color: transparent;
+                            transition: all 250ms;
+
+                            padding: 0.2rem;
+                            i {
+                                color: #3b6978;
+                            }
+
+                            &:hover {
+                                border: 1px solid #3b6978;
+                                background-color: #3b6978;
+
+                                i {
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+
+                    td.text-center {
+                        text-align: center;
+                    }
+                }
+
+                tr:nth-child(odd) {
+                    background-color: #dee2e6;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    main.account-main {
+        article {
+            div.account-patient-table {
+                width: 60vw;
+            }
+        }
+    }
+}
+
+@media (max-width: 414px) {
+    main.account-main {
+        article {
+            div.account-patient-table {
+                width: 80vw;
+            }
+        }
+    }
+}

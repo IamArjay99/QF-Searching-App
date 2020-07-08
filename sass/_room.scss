@@ -1,0 +1,65 @@
+main.room-main {
+    article {
+        h2 {
+            text-align: center;
+            padding-top: 1rem;
+        }
+
+        h4 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        div.row {
+            width: 100%;
+            padding: 1rem 5rem;
+
+            div.table-responsive {
+                width: 100%;
+                overflow-x: auto;
+                height: auto;
+                margin-bottom: 2rem;
+
+                table {
+                    width: 100%;
+                    display: table;
+                    border-collapse: collapse;
+                    text-align: center;
+                    height: auto;
+
+                    thead,
+                    tbody {
+                        tr {
+                            display: table-row;
+                            td,
+                            th {
+                                border: 1px solid grey;
+                                padding: 0.5rem 1rem;
+                            }
+                        }
+                    }
+
+                    thead,
+                    tbody {
+                        tr {
+                            th {
+                                background-color: rgb(41, 40, 40);
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    main.room-main {
+        article {
+            div.row {
+                padding: 1rem 2rem;
+            }
+        }
+    }
+}

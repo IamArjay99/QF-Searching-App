@@ -1,0 +1,327 @@
+main.messages-main {
+    article {
+        display: block;
+        width: 100%;
+
+        .messages-box {
+            display: flex;
+            width: 60vw;
+            margin: 2rem auto 0 auto;
+            min-height: 70vh;
+            height: auto;
+            position: relative;
+            border: 1px solid lightgrey;
+
+            .messages-names {
+                min-height: 100%;
+                flex-basis: 250px;
+                flex-shrink: 1;
+                background-color: #738e97;
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    list-style-type: none;
+                    padding: 0;
+                    width: 100%;
+
+                    li.active {
+                        background-color: #18637c;
+                    }
+
+                    li {
+                        padding: 1rem;
+                        background-color: #2b435236;
+                        color: white;
+
+                        a {
+                            display: flex;
+                            align-items: center;
+
+                            i {
+                                font-size: 2rem;
+                            }
+                            span {
+                                font-size: 1.1rem;
+                                padding-left: 0.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .messages-conversation {
+                min-height: 100%;
+                flex-grow: 1;
+                flex-shrink: 2;
+                flex-basis: 300px;
+                position: relative;
+                background-color: #18637c4f;
+
+                .conversation {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 85%;
+
+                    .converstaion-name {
+                        background-color: #3b6978;
+                        color: white;
+                        font-size: 1.5rem;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        min-height: 3rem;
+                        height: auto;
+                        padding: 0.5rem;
+                        z-index: 2;
+
+                        span {
+                            word-wrap: break-word;
+                        }
+                    }
+
+                    ul {
+                        list-style-type: none;
+                        width: 100%;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        max-height: 100%;
+                        overflow-y: auto;
+                        z-index: 1;
+
+                        li {
+                            width: 100%;
+                            height: auto;
+                            padding: 0.5rem;
+                            word-wrap: break-word;
+
+                            i {
+                                font-size: 1.4rem;
+                            }
+                        }
+
+                        li.sender {
+                            text-align: right;
+                            padding-left: 5rem;
+
+                            i {
+                                float: right;
+                                margin-left: 0.5rem;
+                            }
+                            span {
+                                // padding-right: 0.5rem;
+                                font-size: 1.1rem;
+                            }
+                        }
+
+                        li.receiver {
+                            text-align: left;
+                            padding-right: 5rem;
+
+                            i {
+                                float: left;
+                                margin-right: 0.5rem;
+                            }
+                            span {
+                                // padding-left: 0.5rem;
+                                font-size: 1.1rem;
+                                word-wrap: break-word;
+                            }
+                        }
+                    }
+
+                    ul#conversation-list-admin {
+                        padding-top: 3rem;
+
+                        li {
+                            .btn {
+                                padding: 0.3rem;
+                                border-radius: 5px;
+                                margin: 2px 1px 5px 1px;
+                                transition: all 250ms;
+                                cursor: pointer;
+                                font-size: 1rem;
+                            }
+
+                            .btn-success {
+                                $secondaryColor: rgb(58, 202, 39);
+                                border: 1px solid $secondaryColor;
+                                color: white;
+                                background-color: $secondaryColor;
+
+                                &:hover {
+                                    background-color: rgb(27, 196, 4);
+                                }
+                            }
+                            .btn-danger {
+                                $infoColor: rgb(160, 17, 17);
+                                border: 1px solid $infoColor;
+                                color: white;
+                                background-color: $infoColor;
+
+                                &:hover {
+                                    background-color: rgb(87, 4, 4);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .text-button {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    display: flex;
+                    height: 15%;
+                    width: 100%;
+
+                    textarea {
+                        height: 100%;
+                        resize: none;
+                        width: 85%;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 1.1rem;
+                        padding: 0.2rem 0.3rem;
+                    }
+                    button {
+                        height: 100%;
+                        width: 15%;
+                        text-align: center;
+                        background-color: rgba(0, 0, 139, 0.8);
+                        border: 1px solid lightskyblue;
+                        color: white;
+                        border-radius: 5px;
+                        margin-left: 2px;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: rgba(0, 0, 139, 1);
+                            border: 1px solid lightskyblue;
+                            color: white;
+                        }
+
+                        i {
+                            font-size: 2rem;
+                        }
+                    }
+
+                    button:disabled {
+                        cursor: auto;
+                        &:hover {
+                            background-color: rgba(0, 0, 139, 0.8);
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer {
+            text-align: center;
+            width: 100%;
+            font-size: 1.1rem;
+            padding: 0.5rem;
+
+            a {
+                text-decoration: none;
+                color: rgb(6, 6, 161);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    main.messages-main {
+        article {
+            .messages-box {
+                width: 80vw;
+
+                .messages-names {
+                    flex-basis: 150px;
+
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        list-style-type: none;
+                        padding: 0;
+                        width: 100%;
+
+                        li {
+                            padding: 1rem;
+                            background-color: #2b435236;
+                            display: flex;
+                            align-items: center;
+                            color: white;
+
+                            i {
+                                font-size: 2rem;
+                            }
+                            span {
+                                font-size: 1.1rem;
+                                padding-left: 0.5rem;
+                            }
+                        }
+                    }
+                }
+
+                .messages-conversation {
+                    min-height: 100%;
+                    flex-grow: 1;
+
+                    .text-button {
+                        button {
+                            width: 5rem;
+
+                            i {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 414px) {
+    main.messages-main {
+        article {
+            padding: 0.2rem;
+
+            .messages-box {
+                width: 80vw;
+
+                .messages-names {
+                    flex-basis: 60px;
+
+                    ul {
+                        li {
+                            span {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                .messages-conversation {
+                    min-height: 100%;
+                    flex-grow: 1;
+
+                    .text-button {
+                        button {
+                            width: 5rem;
+
+                            i {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

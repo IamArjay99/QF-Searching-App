@@ -1,0 +1,114 @@
+main.signin {
+    article {
+        div.signin-content {
+            padding: 6rem 0;
+
+            div.signin-box {
+                background-color: #323b5e;
+                min-height: 50vh;
+                height: auto;
+                width: 30vw;
+                display: block;
+                margin: 2rem auto;
+                border-radius: 10px;
+                padding: 1rem 2rem;
+                color: whitesmoke;
+
+                div.signin-header {
+                    text-align: center;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    padding: 1rem 0;
+                }
+
+                div.signin-body {
+                    form {
+                        #error-feedback {
+                            background-color: rgba(255, 0, 0, 0.2);
+                            color: rgb(224, 194, 194);
+                            text-align: center;
+                            width: 100%;
+                            padding: 1rem 0;
+                            border: 1px solid rgb(129, 3, 3);
+                            font-size: 1rem;
+                            margin: 1rem 0;
+                            text-shadow: 0.5px 0.5px 0.5px rgb(0, 0, 0);
+                        }
+
+                        .form-group {
+                            width: 100%;
+                            position: relative;
+                            padding: 0.3rem 0;
+
+                            input {
+                                width: 100%;
+                                height: 2rem;
+                                font-size: 1rem;
+                                padding: 0.2rem 0.5rem;
+                                outline: none;
+                                border: 1px solid black;
+                                border-radius: 5px;
+                            }
+                        }
+
+                        button {
+                            padding: 0.5rem 1rem;
+                            border-radius: 5px;
+                            font-size: 1rem;
+                            outline: none;
+                            border: 1px solid #ffffff;
+                            margin: 1rem 0;
+                            color: #fff;
+                            background-color: transparent;
+                            cursor: pointer;
+                            transition: all 500ms;
+
+                            &:hover {
+                                border: 1px solid #ffffff;
+                                color: #323b5e;
+                                background-color: white;
+                            }
+                        }
+                    }
+                }
+
+                div.signin-footer {
+                    text-align: center;
+
+                    a {
+                        text-decoration: none;
+                        color: wheat;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 551px) and (max-width: 860px) {
+    main.signin {
+        article {
+            div.signin-content {
+                padding: 3rem 0;
+
+                div.signin-box {
+                    width: 50vw;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    main.signin {
+        article {
+            div.signin-content {
+                padding: 3rem 0;
+
+                div.signin-box {
+                    width: 80vw;
+                }
+            }
+        }
+    }
+}

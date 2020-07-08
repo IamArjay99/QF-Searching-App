@@ -1,0 +1,182 @@
+main.dashboard-main {
+    article {
+        display: flex;
+        position: relative;
+        padding: 1rem 2rem;
+
+        section {
+            padding: 1rem;
+        }
+
+        section.metro-manila-svg {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                font-size: 1.3rem;
+                text-align: justify;
+                text-indent: 3rem;
+
+                span.big-letter {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        section.list-of-cities {
+            width: 50%;
+            text-align: center;
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .input-group {
+                width: 100%;
+                height: 2.5rem;
+                margin: 0.2rem 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border: 0.5px solid grey;
+                border-radius: 5px;
+                position: relative;
+
+                i {
+                    width: 10%;
+                }
+
+                #searchCity {
+                    padding: 0.5rem;
+                    font-size: 1rem;
+                    width: 90%;
+                    border: none;
+                    outline: none;
+                    height: 100%;
+                }
+            }
+
+            .table-responsive {
+                width: 100%;
+                overflow-y: scroll;
+                height: auto;
+                max-height: 60vh;
+                border: 1px solid #383e5670;
+
+                table {
+                    width: 100%;
+                    height: auto;
+                    border-collapse: collapse;
+                    display: table;
+
+                    tr {
+                        display: table-row;
+
+                        td {
+                            padding: 0.7rem;
+                            border: 1px solid #383e5670;
+
+                            .city-name {
+                                float: left;
+                            }
+
+                            .city-details {
+                                float: right;
+
+                                a {
+                                    text-decoration: none;
+                                    color: #383e56;
+                                    border-bottom: 0.5px solid #383e56;
+                                    transition: all 250ms;
+
+                                    &:hover {
+                                        color: #0d1e5f;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    tr:nth-child(odd) {
+                        background-color: #e7e7e7;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 871px) and (max-width: 1060px) {
+    main.dashboard-main {
+        padding-bottom: 5rem;
+
+        article {
+            flex-direction: column;
+
+            section.metro-manila-svg {
+                width: 100%;
+                padding: 1rem 4rem;
+
+                p {
+                    font-size: 1.1rem;
+                }
+            }
+
+            section.list-of-cities {
+                width: 100%;
+                padding: 1rem 4rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 451px) and (max-width: 870px) {
+    main.dashboard-main {
+        padding-bottom: 3rem;
+
+        article {
+            flex-direction: column;
+
+            section.metro-manila-svg {
+                width: 100%;
+                padding: 1rem 2rem;
+
+                p {
+                    font-size: 1.1rem;
+                }
+            }
+
+            section.list-of-cities {
+                width: 100%;
+                padding: 1rem 2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    main.dashboard-main {
+        padding-bottom: 2rem;
+
+        article {
+            padding: 1rem 0;
+            flex-direction: column;
+
+            section.metro-manila-svg {
+                width: 100%;
+                padding: 1rem;
+
+                p {
+                    font-size: 1.1rem;
+                }
+            }
+
+            section.list-of-cities {
+                width: 100%;
+                // padding-bottom: 4rem;
+            }
+        }
+    }
+}

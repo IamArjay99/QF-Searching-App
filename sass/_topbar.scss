@@ -1,0 +1,48 @@
+nav.topbar {
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    z-index: 1;
+    background-color: #3b6978;
+    height: 4rem;
+
+    div.topbar-menu {
+        margin-left: 250px;
+        font-size: 1.5rem;
+        transition: all 750ms;
+
+        i {
+            cursor: pointer;
+        }
+    }
+
+    div.topbar-logout {
+        transition: all 250ms;
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            padding-right: 2rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    nav.topbar {
+        div.topbar-menu {
+            margin-left: 70px;
+        }
+
+        div.topbar-logout {
+            a {
+                padding-right: 0.5rem;
+            }
+        }
+    }
+}

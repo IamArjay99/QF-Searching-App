@@ -1,0 +1,148 @@
+main.room-details-main {
+    article {
+        h2 {
+            text-align: center;
+            padding-top: 1rem;
+        }
+
+        h4 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        div.row {
+            width: 100%;
+            padding: 1rem 5rem;
+
+            div.float-right {
+                float: right;
+
+                .btn {
+                    padding: 0.5rem 1rem;
+                    font-size: 1rem;
+                    margin-left: 0.5rem;
+                    margin-bottom: 0.5rem;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+
+                .btn-info {
+                    background-color: transparent;
+                    border: 1px solid rgb(88, 176, 206);
+                    color: rgb(88, 176, 206);
+                    transition: all 250ms;
+
+                    &:hover {
+                        background-color: rgb(88, 176, 206);
+                        color: white;
+                    }
+                }
+
+                .btn-primary {
+                    background-color: transparent;
+                    border: 1px solid #0069d9;
+                    color: #0069d9;
+                    transition: all 250ms;
+
+                    &:hover {
+                        background-color: #0069d9;
+                        color: white;
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                }
+            }
+
+            div.table-responsive {
+                width: 100%;
+                overflow-x: auto;
+                height: auto;
+
+                table {
+                    width: 100%;
+                    display: table;
+                    border-collapse: collapse;
+                    text-align: center;
+                    height: auto;
+
+                    thead,
+                    tbody {
+                        tr {
+                            display: table-row;
+                            td,
+                            th {
+                                border: 1px solid grey;
+                                padding: 0.5rem 1rem;
+                            }
+                        }
+                    }
+
+                    thead,
+                    tbody {
+                        tr {
+                            th {
+                                background-color: rgb(41, 40, 40);
+                                color: white;
+                            }
+
+                            td {
+                                a {
+                                    text-decoration: none;
+                                }
+
+                                .btn-success {
+                                    border: 1px solid darkgreen;
+                                    color: darkgreen;
+                                    background-color: transparent;
+                                    font-size: 1.2rem;
+                                    padding: 0.1rem;
+                                    border-radius: 5px;
+                                    cursor: pointer;
+                                    transition: all 250ms;
+                                    margin: 1px;
+
+                                    &:hover {
+                                        color: white;
+                                        background-color: darkgreen;
+                                    }
+                                }
+                                .btn-danger {
+                                    border: 1px solid darkred;
+                                    color: darkred;
+                                    background-color: transparent;
+                                    font-size: 1.2rem;
+                                    padding: 0.1rem;
+                                    border-radius: 5px;
+                                    cursor: pointer;
+                                    margin: 1px;
+
+                                    &:hover {
+                                        color: white;
+                                        background-color: darkred;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    main.room-details-main {
+        article {
+            div.row {
+                padding: 1rem 2rem;
+
+                div.float-right {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+main.patient-status-main {
+    article {
+        h2 {
+            text-align: center;
+            padding-top: 1rem;
+        }
+
+        h4 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        div.row {
+            width: 100%;
+            padding: 1rem 5rem;
+
+            div {
+                div.table-responsive {
+                    width: 100%;
+                    overflow-x: auto;
+                    margin-bottom: 1.5rem;
+                    height: auto;
+
+                    table {
+                        width: 100%;
+                        display: table;
+                        border-collapse: collapse;
+                        text-align: center;
+                        height: auto;
+
+                        thead,
+                        tbody {
+                            tr {
+                                display: table-row;
+                                td,
+                                th {
+                                    border: 1px solid grey;
+                                    padding: 0.5rem 1rem;
+                                }
+                            }
+                        }
+
+                        thead {
+                            tr {
+                                background-color: black;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    main.patient-status-main {
+        article {
+            div.row {
+                padding: 1rem 2rem;
+            }
+        }
+    }
+}
