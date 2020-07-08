@@ -28,6 +28,9 @@
         header("Location: ../index.php");
     }
 
+    $getAllRequest = $request->getAllRequest();
+    $countRequest = count($getAllRequest);
+
 ?>
 
 <!DOCTYPE html>
@@ -36,6 +39,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>QF Searching App</title>
+        <link rel="shortcut icon" href="./../dist/img/logo.jpg" type="image/x-icon">
         <!------------------------- CSS FILES ------------------------->
         <!-- Google Fonts -->
         <link
@@ -93,8 +97,18 @@
                     <li class="<?= strpos($url, 'pages/messages') !== false ? "active" : "" ?>">
                         <a href="messages.php">
                             <i class="fa fa-inbox" aria-hidden="true"></i>
-                            <span>Messages</span></a
-                        >
+                            <span>Messages 
+                            <?php if ($countRequest > 0 && $user_role === "admin") { ?>
+                                <small style="background-color: #afc6ce;
+                                            border-radius: 10px;
+                                            color: black;
+                                            height: 10px;
+                                            width: 10px;
+                                            margin-left: .1rem;
+                                            display: inline-block;"></small>
+                            <?php } ?>
+                            </span>
+                        </a>
                     </li>
                     <li class="<?= strpos($url, 'pages/account') !== false ? "active" : "" ?>">
                         <a href="account.php">

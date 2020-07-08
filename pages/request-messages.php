@@ -18,7 +18,15 @@
                             $fullname = $getPatientRequest['fullname'];
                             $timestamp = $req['created_at'];
                             $from_id = $req['patient_id'];
-                            $output = "<li style='border-bottom: 1px solid grey'>";
+                            $url = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+                            $cmpstr = "user_id=".$from_id."&name=".$fullname;
+                            $cmpstr = str_replace(" ", "%20", $cmpstr);
+                            if (strpos($url, $cmpstr) !== false) {
+                                $class = "active";
+                            } else {
+                                $class = "inactive";
+                            }
+                            $output = "<li style='border-bottom: 1px solid grey' class='".$class."'>";
                             $output .= "<a href='request-messages.php?user_id=".$from_id."&name=".$fullname."' style='text-decoration: none; color: white'>";
                             $output .= '<i class="fa fa-user-circle" aria-hidden="true"></i>';
                             $output .= "<span>";

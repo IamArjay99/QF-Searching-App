@@ -108,7 +108,11 @@
                 </div>
             </div>
             <div class="footer">
-                <a href="request-messages.php">Request Messages</a>
+                <?php 
+                    $getAllRequest = $request->getAllRequest();
+                    $countRequest = count($getAllRequest);
+                ?>
+                <a href="request-messages.php">Request Messages (<?= $countRequest ?>)</a>
             </div>
         <?php } ?>
         </article>

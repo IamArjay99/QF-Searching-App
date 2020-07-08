@@ -22,6 +22,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QF Searching App</title>
+    <link rel="shortcut icon" href="./<?= $path ?>/dist/img/logo.jpg" type="image/x-icon">
     <!------------------------- CSS FILES ------------------------->
     <!-- Google Fonts -->
     <link
@@ -58,7 +59,7 @@
     <nav>
       <div class="nav-title">
         <a href="./<?= strpos($url, 'pages') !== false ? "../" : "" ?>index.php">
-          <img src="./<?= $path ?>dist/img/covid.png" alt="QF Searching App Logo" />
+          <img src="./<?= $path ?>dist/img/logo.jpg" alt="QF Searching App Logo" />
           <span>QF Searching App</span>
         </a>
       </div>
