@@ -19,11 +19,12 @@
                             $timestamp = $req['created_at'];
                             $from_id = $req['patient_id'];
                             $output = "<li style='border-bottom: 1px solid grey'>";
+                            $output .= "<a href='request-messages.php?user_id=".$from_id."&name=".$fullname."' style='text-decoration: none; color: white'>";
                             $output .= '<i class="fa fa-user-circle" aria-hidden="true"></i>';
-                            $output .= "<span><a href='request-messages.php?user_id=".$from_id."&name=".$fullname."' style='text-decoration: none; color: white'>";
+                            $output .= "<span>";
                             $output .= $fullname ."<br>";
                             $output .= "<small style='font-size: .8rem'>" .date("M d, Y - h:mA" ,strtotime($timestamp)). "</small>";
-                            $output .= "</a></span>";
+                            $output .= "</span></a>";
                             $output .= "</li>";
                             echo $output;
                         }

@@ -47,6 +47,13 @@ main.messages-main {
                                 padding-left: 0.5rem;
                             }
                         }
+
+                        a.patient {
+                            display: flex;
+                            align-items: center;
+                            text-decoration: none;
+                            color: white;
+                        }
                     }
                 }
             }

@@ -12,7 +12,11 @@
             <div class="messages-box">
                 <div class="messages-names">
                     <ul>
-                        <li><i class="fa fa-user-circle" aria-hidden="true"></i> <span>AD Quarantine Corp.</span></li>
+                        <li>
+                            <a href="#" class="patient">
+                                <i class="fa fa-user-circle" aria-hidden="true"></i> <span>AD Quarantine Corp.</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div class="messages-conversation">

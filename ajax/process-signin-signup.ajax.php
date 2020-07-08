@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include_once '../classes/database.class.php';
+    include_once '../classes/Database.class.php';
 
     class Signin extends Database {
         public function checkAdminSignin($email, $password) {

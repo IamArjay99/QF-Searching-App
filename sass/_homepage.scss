@@ -161,11 +161,15 @@ main.index {
         padding: 4rem 1rem;
 
         article {
+            display: flex;
             flex-direction: column;
+            z-index: 0;
 
             section.metro-manila-svg {
                 width: 100%;
                 padding: 1rem;
+                margin-bottom: 1rem;
+                height: auto;
 
                 p {
                     font-size: 1.1rem;
@@ -174,7 +178,7 @@ main.index {
 
             section.list-of-cities {
                 width: 100%;
-                padding-bottom: 4rem;
+                margin-top: 1rem;
             }
         }
     }
