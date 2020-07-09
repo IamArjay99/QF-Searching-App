@@ -7,10 +7,10 @@ This project was created with PHP and MySQL.
 * [Setup](#setup)
 * [Usage](#usage)
 
-### General Info
+## General Info
 Quarantine Facilty Seaching App allows you to search for the specific city in Metro Manila, Philippines and find out what are the current status of that city and allows you to request quarantine if you think you are already infected with the Corona Virus Disease 2019. 
 
-### Technologies
+## Technologies
 * phpti-master
 * sweetalert2
 * jquery
@@ -18,7 +18,7 @@ Quarantine Facilty Seaching App allows you to search for the specific city in Me
 * fontawesome
 
 
-### Setup
+## Setup
 1. Install Xampp Control Panel
 2. Start MySQL and Apache Server
 3. Go to localhost in your browser
@@ -26,7 +26,7 @@ Quarantine Facilty Seaching App allows you to search for the specific city in Me
 5. Create database named as quarantine_facilities
 6. Import sql file inside database folder
 
-### Usage
+## Usage
 #### Admin
 Email: admin@gmail.com <br />
 Password: admin <br />
