@@ -1,7 +1,7 @@
 # Quarantine Facility Searching App
 This project was created with PHP and MySQL.
 
-## Table of contents
+## Table of Contents
 * [General Info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
@@ -15,6 +15,7 @@ Quarantine Facilty Seaching App allows you to search for the specific city in Me
 * sweetalert2
 * jquery
 * chartjs
+* fontawesome
 
 
 ### Setup
@@ -27,9 +28,10 @@ Quarantine Facilty Seaching App allows you to search for the specific city in Me
 
 ### Usage
 #### Admin
-Email: admin@gmail.com
-Password: admin
+Email: admin@gmail.com <br />
+Password: admin <br />
 #### User/Patient
-Email: arjaydiangzon@gmail.com
-Password: arjaydiangzon
-Note: You can also sign up and use your account
+Email: arjaydiangzon@gmail.com <br />
+Password: arjaydiangzon <br />
+
+Note: You can also sign up and use your own account
